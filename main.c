@@ -1,22 +1,15 @@
-
-
 #include <stdio.h>
-#include <math.h>
 
-
-#include <stdio.h>
 int main()
 {
-    unsigned int value, value2;
+    // 10 - 100
+    // 6
+    int num, num2, m;
+    scanf("%d", &num);
+    printf((num >= 10 && num <= 100) ? "true\n": "false\n");
 
-    printf("Enter hexadecimal value without \"0x\": "); // 1
-    scanf("%x", &value);
-    printf("IN decimal: %d\n", value); // 2
-    printf("IN Octal: %o\n", value >> 2); // 3
-    printf("Negative: %o\n", ~value);  // 4
+    scanf(" %o", &num2);
+    printf("%c %d", num2 ? 'Y':'N',(m>>21) %2 );
 
-    printf("Enter new octal value without \"0x\": ");
-    scanf(" %o", &value2);
-    printf("Bitewise or: %o", value | value2);
-    return 0;
+
 }
