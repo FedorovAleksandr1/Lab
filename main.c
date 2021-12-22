@@ -3,15 +3,20 @@
 #include <stdio.h>
 #include <math.h>
 
-#define PI 3.14159265
 
-int main() {
-    double deg, val, z1, z2, sqr1, sqr2;
-    val = PI/180;
-    scanf("%lf", &deg);
-    sqr1 = (sin(3*val - 2*deg))*(sin(3*val - 2*deg));
-    sqr2 = (cos(5*val + 2*deg))*(cos(5*val + 2*deg));
-    z1 = 2 * sqr1 * sqr2;
-    z2 = 0.25 - 0.25 * sin(2.5*val - 8*deg);
-    printf("%lf %lf", z1, z2);
+#include <stdio.h>
+int main()
+{
+    unsigned int value, value2;
+
+    printf("Enter hexadecimal value without \"0x\": "); // 1
+    scanf("%x", &value);
+    printf("IN decimal: %d\n", value); // 2
+    printf("IN Octal: %o\n", value >> 2); // 3
+    printf("Negative: %o\n", ~value);  // 4
+
+    printf("Enter new octal value without \"0x\": ");
+    scanf(" %o", &value2);
+    printf("Bitewise or: %o", value | value2);
+    return 0;
 }
