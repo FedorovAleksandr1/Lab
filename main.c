@@ -1,23 +1,51 @@
+
 #include <stdio.h>
-#include <malloc.h>
+
+int PI = 3.14159265;
+
+struct Circle {
+
+    int R;
+};
+
+int CircleS (struct Circle Circ) {
+    return 2 * (PI * Circ.R);
+}
+
+
+struct ADSL {
+    unsigned int DSL: 1;
+    unsigned int PPP: 1;
+    unsigned int Link: 1;
+};
+
+union ADSLU {
+    unsigned u;
+    struct ADSL ADSL;
+};
 
 int main()
 {
-    char arr[4] = {'a', 'b', 'c', 'd'};
-    char *arr_c = arr;
-    for(int i=0; i<4 ; i++){
-        printf("%c ", *arr_c++);
-    }
-    printf("\n");
+    enum Days {
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+        Sunday,
+    };
 
-    char *arr_2 = (char *) malloc(4*sizeof(char));
-    arr_2[0] = 'a';
-    arr_2[1] = 'b';
-    arr_2[2] = 'c';
-    arr_2[3] = 'd';
-    for(int i=0; i<4; i++) {
-        printf("%с ", *arr_2++);
-    }
-    free(arr_2);
+    printf("Day: %d \n", Monday);
+
+    struct Circle Circ = {7};
+    printf("Sqr: %d \n", CircleS(Circ));
+
+    union ADSLU ADSLState;
+    printf("Turn On: ");
+    scanf("%x", &ADSLState.u);
+    printf("Play: %d\n", ADSLState.ADSL.DSL);
+    printf("Play: %d\n", ADSLState.ADSL.PPP);
+    printf("Play: %d\n", ADSLState.ADSL.Link);
 }
 
