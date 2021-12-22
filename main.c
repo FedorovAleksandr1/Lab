@@ -1,16 +1,25 @@
 #include <stdio.h>
-#include <string.h>
-int main () {
-    int N;
-    int K;
-    scanf ("%d", N);
-    char str1 [N];
-    char str2 [K];
-    for (int i = 0; i < N; i++)
-        if (str1[i] == str2[i])
-        {
-            printf("Элемент совпадает, %d", i );
-        }
 
+int main ()
+{
+
+    int iValue;
+    int iValue2;
+    int iDuration;
+    int iTotal;
+    int LIMIT = 499;
+    printf("Vvedite velichinu abonentskoy platy:  ");
+    scanf("%d", &iValue);
+    printf("Vvedite stoimost platy za minut sverh limita: ");
+    scanf("%d \n", &iValue2);
+    printf("Prodoljitelnost razgovorov: ");
+    scanf("%d", &iDuration);
+
+
+    if (iDuration > LIMIT) {
+        iTotal = (LIMIT * iValue + (iDuration - LIMIT) * iValue2);
+    }
+    else iTotal = iValue;
+    printf("%d", iTotal);
 }
 
