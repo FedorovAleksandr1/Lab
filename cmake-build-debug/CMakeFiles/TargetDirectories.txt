@@ -1,0 +1,3 @@
+C:/Users/Sasha/CLionProjects/MainLab11/cmake-build-debug/CMakeFiles/MainLab11.dir
+C:/Users/Sasha/CLionProjects/MainLab11/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sasha/CLionProjects/MainLab11/cmake-build-debug/CMakeFiles/rebuild_cache.dir
